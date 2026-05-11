@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Abel Westendorp | abeltjeee.nl</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: #0f1117;
+      color: #ffffff;
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      width: 500px;
+      height: 500px;
+      background: radial-gradient(circle, rgba(212,175,55,0.18), transparent 70%);
+      top: -150px;
+      right: -150px;
+      z-index: -1;
+    }
+
+    body::after {
+      content: "";
+      position: fixed;
+      width: 400px;
+      height: 400px;
+      background: radial-gradient(circle, rgba(255,255,255,0.05), transparent 70%);
+      bottom: -120px;
+      left: -120px;
+      z-index: -1;
+    }
+
+    header {
+      width: 100%;
+      padding: 25px 8%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      background: rgba(15, 17, 23, 0.85);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+      z-index: 1000;
+    }
+
+    .logo {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: #d4af37;
+      letter-spacing: 1px;
+    }
+
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      margin-left: 25px;
+      font-weight: 500;
+      transition: 0.3s ease;
+    }
+
+    nav a:hover {
+      color: #d4af37;
+    }
+
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 0 10%;
+    }
+
+    .hero-content {
+      max-width: 900px;
+    }
+
+    .hero h1 {
+      font-size: 4rem;
+      margin-bottom: 20px;
+      font-weight: 700;
+      background: linear-gradient(to right, #ffffff, #d4af37);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      color: #cfcfcf;
+      margin-bottom: 35px;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 14px 32px;
+      border-radius: 50px;
+      background: linear-gradient(135deg, #d4af37, #f5d76e);
+      color: #111;
+      text-decoration: none;
+      font-weight: 600;
+      transition: 0.3s ease;
+      box-shadow: 0 10px 30px rgba(212,175,55,0.25);
+    }
+
+    .btn:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 15px 35px rgba(212,175,55,0.4);
+    }
+
+    section {
+      padding: 100px 10%;
+    }
+
+    .section-title {
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+      color: #d4af37;
+    }
+
+    .section-text {
+      color: #c9c9c9;
+      max-width: 800px;
+      margin-bottom: 50px;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 25px;
+    }
+
+    .card {
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.08);
+      padding: 30px;
+      border-radius: 20px;
+      transition: 0.3s ease;
+      backdrop-filter: blur(10px);
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      border-color: rgba(212,175,55,0.5);
+      box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    }
+
+    .card h3 {
+      margin-bottom: 15px;
+      color: #ffffff;
+    }
+
+    .card p {
+      color: #bdbdbd;
+    }
+
+    .editable {
+      background: rgba(255,255,255,0.03);
+      border-left: 4px solid #d4af37;
+      padding: 25px;
+      border-radius: 12px;
+      margin-top: 20px;
+      color: #d6d6d6;
+    }
+
+    footer {
+      text-align: center;
+      padding: 40px 20px;
+      border-top: 1px solid rgba(255,255,255,0.08);
+      color: #9e9e9e;
+    }
+
+    @media (max-width: 768px) {
+      .hero h1 {
+        font-size: 2.6rem;
+      }
+
+      nav {
+        display: none;
+      }
+
+      .section-title {
+        font-size: 2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="logo">abeltjeee.nl</div>
+
+    
+  </header>
+
+  <section class="hero" id="home">
+    <div class="hero-content">
+      <h1>Abel Westendorp</h1>
+      <p>
+        Welkom op mijn persoonlijke website. Een moderne en luxe plek waar ik zelf content,
+        informatie, updates en projecten kan toevoegen.
+      </p>
+
+      <a href="#content" class="btn">Bekijk Meer</a>
+    </div>
+  </section>
+
+  <section id="over">
+    <h2 class="section-title">Over Deze Site</h2>
+
+    <p class="section-text">
+      Deze website is volledig gemaakt in HTML en CSS en is ontworpen met een moderne,
+      luxe uitstraling. Je kunt makkelijk je eigen tekst aanpassen en nieuwe content toevoegen.
+    </p>
+
+    <div class="cards">
+      <div class="card">
+        <h3>Modern Design</h3>
+        <p>
+          Strakke layouts, luxe kleuren en een professionele uitstraling.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>Responsive</h3>
+        <p>
+          Werkt perfect op mobiel, tablet en desktop.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>Makkelijk Aanpasbaar</h3>
+        <p>
+          Voeg eenvoudig je eigen teksten, projecten en informatie toe.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section id="content">
+    <h2 class="section-title">Eigen Content</h2>
+
+    <p class="section-text">
+      Hieronder kun je later zelf tekst toevoegen of aanpassen.
+    </p>
+
+    <div class="editable">
+      <h3>✦ Jouw Eigen Tekst Hier</h3>
+      <p>
+        Je kunt deze tekst aanpassen naar wat jij wilt.
+        Bijvoorbeeld informatie over jezelf, je projecten, social media,
+        hobby’s of updates.
+      </p>
+    </div>
+
+    <div class="editable">
+      <h3>✦ Nog Een Blok</h3>
+      <p>
+        Voeg hier nieuwe informatie toe door simpelweg de HTML tekst aan te passen.
+      </p>
+    </div>
+  </section>
+
+  
+
+  <footer>
+    © 2026 abeltjeee.nl — Gemaakt voor Abel Westendorp
+  </footer>
+
+</body>
+</html>
